@@ -14,15 +14,15 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { start, end, description } = req.body;
-    const event = new Event({ start, end, description });
+    const { day,  start, end, description } = req.body;
+    const event = new Event({ day, start, end, description });
     await event.save();
     res.json({ status: 'Event saved!' });
 });
 
 router.put('/:id', async (req, res) => {
-    const { start, end, description } = req.body;
-    const newEvent = { start, end, description };
+    const { day, start, end, description } = req.body;
+    const newEvent = { day, start, end, description };
     await Event.findByIdAndUpdate(req.params.id, newEvent);
     res.json({ status: 'Event updated!'});
 });

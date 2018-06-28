@@ -16,7 +16,9 @@ class Events extends Component {
     } else {
       return (
         <div>
-          {this.props.events.map((event, id) => <Item key={id} event={event}/>)}
+          {this.props.events.map((event, id) => <Item key={id}
+                                                      event={event}
+                                                      fetchEvents={this.props.fetchEvents}/>)}
         </div>
       );
     }
@@ -27,7 +29,9 @@ class Events extends Component {
     } else {
       return (
         <div>
-          {this.props.today.map((event, id) => <Item key={id} event={event}/>)}
+          {this.props.today.map((event, id) => <Item key={id}
+                                                     event={event}
+                                                     fetchEvents={this.props.fetchEvents}/>)}
         </div>
       );
     }

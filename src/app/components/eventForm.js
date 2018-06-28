@@ -7,15 +7,18 @@ class EventForm extends Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      day: this.props.selected,
-      start: moment(),
-      end: moment(),
-      description: ''
-    };
+
+      this.state = {
+        id: '',
+        day: props.selected,
+        start: moment(),
+        end: moment(),
+        description: ''
+      };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleSubmit(e){
     e.preventDefault();

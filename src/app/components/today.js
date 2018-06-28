@@ -29,7 +29,10 @@ class Today extends Component {
           className={btnClass}>
           <span></span>
         </button>
-        {this.state.form? <EventForm selected={this.props.selected} fetchEvents={this.props.fetchEvents} handleForm={this.handleForm}/> : null }
+        {this.state.form? <EventForm
+                            selected={this.props.selected}
+                            fetchEvents={this.props.fetchEvents}
+                            handleForm={this.handleForm}/> : null }
       </div>
     );
   }

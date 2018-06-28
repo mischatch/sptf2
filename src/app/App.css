@@ -218,9 +218,16 @@ h4 {
   border-radius: 15px;
   width: 400px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .card-time {
   display: flex;
   justify-content: space-between;
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }

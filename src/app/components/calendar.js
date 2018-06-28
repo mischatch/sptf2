@@ -13,7 +13,7 @@ class Calendar extends Component {
       month: moment(),
       selected: moment().startOf('day'),
       events: [],
-      today: []
+      today: [],
     };
 
     this.prevMonth = this.prevMonth.bind(this);
@@ -124,6 +124,7 @@ class Calendar extends Component {
             events={this.state.events}
             today={this.state.today}
             selected={this.state.selected}
+            fetchEvents={this.fetchEvents}
             />
       </div>
    );
